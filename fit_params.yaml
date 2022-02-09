@@ -1,37 +1,42 @@
 ACE_fname_stem: tial_ace
 data:
+  energy_key: energy
   force_key: force
   virial_key: virial
-  fname: /Users/elena/.julia/dev/ACE1pack/test/files/TiAl_tutorial_DB_tenth.xyz
+  fname: ""
 e0:
   Al: -105.5954
   Ti: -1586.0195
 basis:
-  pair_basis:
-    maxdeg: 6
-    r0: 2.88
-    species:
-    - Ti
-    - Al
-    rcut: 5.0
-    rin: 1.44
-    pcut: 2
-    pin: 2
   rpi_basis:
+    type: rpi
     N: 3
     maxdeg: 6
     r0: 2.88
     rad_basis:
       type: rad
       pin: 2 
+      pcut: 2
       rcut: 5.0
       rin: 1.44
     species:
     - Ti
     - Al
+  pair_basis:
+    type: pair
+    maxdeg: 6
+    r0: 2.88
+    species:
+    - Ti
+    - Al
+    rcut: 5.0
+    rin: 0.0 
+    pcut: 2
+    pin: 0
 solver:
-  lsqr_damp: 0.001
   solver: lsqr
+  lsqr_damp: 0.005
+  lsqr_atol: 1e-6
 P: 
   type: laplacian
   rlap_scal: 3.0
