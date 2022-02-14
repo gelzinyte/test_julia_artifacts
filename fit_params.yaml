@@ -1,4 +1,4 @@
-ACE_fname_stem: tial_ace
+ACE_fname: tial_ace.json
 data:
   energy_key: energy
   force_key: force
